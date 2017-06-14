@@ -22,3 +22,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Publi::class, function (Faker\Generator $faker) {
+    return [
+        'tittulo' => $faker->sentence,
+        'descripsion' => $faker->paragraph,
+        'url' => $faker->url,
+       
+        
+    ];
+});

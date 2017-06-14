@@ -12,8 +12,8 @@ class PubliController extends Controller
     public function index()
     {
     	//$ver= Publi::all();
-        $ver= Publi::orderby('id','desc')->get();
-
+        //$ver= Publi::orderby('id','desc')->get();
+        $ver= Publi::orderby('id','desc')->paginate(10);
     	return view('publi.indexp')->with(['ver'=> $ver]);
     	//return view('publi/index');
     }
